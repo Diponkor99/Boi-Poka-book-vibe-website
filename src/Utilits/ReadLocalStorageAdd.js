@@ -21,4 +21,4 @@ const getdatachakAndAdd=(id)=>{
         localStorage.setItem('Read data',dataStr)
     }
 }
-export {getdatachakAndAdd}
+export {getdatachakAndAdd,LocalStorageAddReadData}

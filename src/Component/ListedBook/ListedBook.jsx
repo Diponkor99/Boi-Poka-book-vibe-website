@@ -1,7 +1,24 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import { LocalStorageAddReadData } from '../../Utilits/ReadLocalStorageAdd';
+import { useLoaderData } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import ReadBookDetiles from '../ReadBookDetiles/ReadBookDetiles';
 
 const ListedBook = () => {
+    const [data ,setData]=useState([]);
+    const AllDataLoders=useLoaderData()
+   
+useEffect(()=>{
+    const localeStorageData=LocalStorageAddReadData();
+    const StorageDateInt=localeStorageData.map(data=>parseInt(data))
+    const cakeData=AllDataLoders.filter(id=>StorageDateInt.includes(id.bookId))
+    setData(cakeData)
+    console.log( cakeData)
+},[])
+
+
+    
 
     return (
         <div>
@@ -18,7 +35,11 @@ const ListedBook = () => {
     </TabList>
 
     <TabPanel>
-      <h2>Any content 1</h2>
+      <div className='m-4'>
+        {
+           data.map(data=><ReadBookDetiles key={data.bookId} data={data}></ReadBookDetiles>) 
+        }
+      </div>
     </TabPanel>
     <TabPanel>
       <h2>Any content 2</h2>
