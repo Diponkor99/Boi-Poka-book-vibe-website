@@ -22,7 +22,7 @@ const Navber = () => {
        
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <a className="btn btn-ghost text-xl"> <span className=' span font-bold italic text-lime-700'>B</span>ook Vibe</a>
   </div>
   <div className="navbar-center hidden lg:flex allnav">
     <ul className="menu menu-horizontal   ">

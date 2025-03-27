@@ -15,7 +15,7 @@ const Book = ({ book }) => {
                     </figure>
                     <div className="card-body">
                         <div className='flex gap-5 justify-center'>
-                            {tags.map(tag => <input type="reset" value={tag} className=" bg-lime-100 py-1 px-5 rounded-lg text-green-700 font-bold" />)}</div>
+                            {tags.map((tag ,index) => <input type="reset" value={tag} key={index} className=" bg-lime-100 py-1 px-5 rounded-lg text-green-700 font-bold" />)}</div>
                         <h2 className="card-title">{bookName}</h2>
                         <p>{author}</p>
                         <div className='border-t-2 border-dashed'></div>

@@ -33,7 +33,8 @@ const router = createBrowserRouter([
       },
       {
         path:'book/:bookId',
-        element:<BookDetiles></BookDetiles>
+        element:<BookDetiles></BookDetiles>,
+        loader:()=>fetch("./booksData.json")
       }
     ]
   },
