@@ -17,7 +17,7 @@ const Navber = () => {
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow ">
         
         <NavLink className="mx-2" to="/">Home</NavLink>
-        <NavLink className="mx-2" to="./listedbook">Listed Books</NavLink>
+        <NavLink className="mx-2" to="/listedbook">Listed Books</NavLink>
         <NavLink className="mx-2" to="./pageToRead">Pages to Read</NavLink>
        
       </ul>
@@ -27,7 +27,7 @@ const Navber = () => {
   <div className="navbar-center hidden lg:flex allnav">
     <ul className="menu menu-horizontal   ">
         <NavLink  className="mx-2" to="./">Home</NavLink>
-        <NavLink  className="mx-2" to="./listedbook">Listed Books</NavLink>
+        <NavLink  className="mx-2" to="/listedbook">Listed Books</NavLink>
         <NavLink  className="mx-2" to="./pageToRead">Pages to Read</NavLink>
     </ul>
   </div>

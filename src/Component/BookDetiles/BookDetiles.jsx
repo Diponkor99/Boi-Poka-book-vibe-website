@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
-import { getdatachakAndAdd } from '../../Utilits/ReadLocalStorageAdd';
+import { getdatachakAndAdd, WishListAdd } from '../../Utilits/ReadLocalStorageAdd';
 
 const BookDetiles = () => {
     const param= useParams();
@@ -11,8 +11,13 @@ const BookDetiles = () => {
     // console.log(book)
 
     const handelOnclickRead=(id)=>{
-        console.log(id,'read data')
+        // console.log(id,'read data')
         getdatachakAndAdd(id)
+    }
+
+    const handelonClickWishList=(id)=>{
+      WishListAdd(id)
+    //  console.log(id)
     }
     return (
         <div >
@@ -45,7 +50,7 @@ const BookDetiles = () => {
 
      <div className='flex gap-4'>
      <button onClick={()=>handelOnclickRead(param.bookId)} className="btn btn-outline btn-success text-black">Read</button>
-        <button className='btn  px-5 bg-lime-400'>Wish List</button>
+        <button onClick={()=>handelonClickWishList(param.bookId)} className='btn  px-5 bg-lime-400'>Wish List</button>
      </div>
     </div>
   </div>
